@@ -1,0 +1,22 @@
+extends layout
+
+block content
+  section#intro
+    .container
+      .row
+        .seven.columns
+          h2.title Login to CryptX
+          p Login using the credentials emailed to you.
+  
+  section#main.grey
+    .container
+      .twelve.columns
+        .card.mono.form
+          if error
+            p.error= error
+          form.mono(action='/login', method='post')
+              label(for='username') Username:
+              input#username(type='text', name='username', placeholder='Username', required)
+              label(for='password') Password:
+              input#password(type='password', name='password', placeholder='Password', required)
+              input(type='submit', value='Login')

@@ -1,0 +1,24 @@
+extends ../layout
+
+block content
+  section#intro
+    .container
+      .row
+        .seven.columns
+          h2.title CryptX Admin Panel
+          p Here&rsquo;s to the gayzy ones.
+  
+  section#main.grey
+    .container
+      .twelve.columns
+        .card.mono.form
+          if error
+            p.error= error
+          form(method='post', action='/admin/add-questions')
+            label(for='level').single Enter level: 
+            input(type='number', placeholder='Level' name='level')#level
+            label(for='question').single Question: 
+            textarea(placeholder='Question' name='question')#question
+            label(for='answer').single Answer: 
+            input(placeholder='Answer' name='answer')#answer
+            input(type='submit', value='Add question')

@@ -1,0 +1,23 @@
+extends ../layout
+
+block content
+  section#intro
+    .container
+      .row
+        .seven.columns
+          h2.title CryptX Admin Panel: Disqualify
+          p Here&rsquo;s to the gayzy ones.
+          
+  section#main.grey
+    .container
+      .twelve.columns
+        .card.mono.form
+          h1.form-title Disqualify Teams
+          form(method='post', action='/admin/disqualify')
+            label Select team:
+            select.select-teams(name='username')
+              each team in teams
+                option= team.username
+            input(type='submit', value='Disqualify')
+      //- button.red(type='submit', method='post', action='/manage') Demote by 1
+      //- button.green(type='submit', method='post', action='/manage') Promote by 1

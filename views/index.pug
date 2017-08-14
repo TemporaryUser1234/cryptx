@@ -1,23 +1,18 @@
-doctype html
-html
-  head
-    meta(charset='utf-8')
-    title CryptX &middot; X 2017
-    meta(charset='utf-8')
-    meta(name='author', content='The MINET Team')
-    meta(name='description', content='CryptX is X\'s trademark online cryptic hunt.')
-    meta(name='keywords', content='MINET X 2017 CryptX The Mother\'s International School Make')
-    meta(name='viewport', content='width=device-width, initial-scale=1')
-    link(rel='stylesheet', type='text/css', href='https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css')
-    link(rel='stylesheet', type='text/css', href='/css/style.css')
-    link(rel='icon', type='image/png', href='/img/icon.png')
-    link(rel='apple-touch-icon-precomposed', href='/img/icon.png')
-    meta(name='theme-color', content='#2979FF')
-  body
-    .center
-      h1.hero August 14, 3:14 pm.
-    
-  script(src='https://use.typekit.net/buw5klv.js')
-  script.
-    try{Typekit.load({ async: true });}catch(e){}
-  script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js')
+extends plain_layout
+
+block content
+  section#main.grey
+    .container
+      .row
+        .twelve.columns
+          .card.question-card.mono
+            if error
+              p.error= error
+            if isOver
+              img(src='https://i.imgflip.com/1swb24.jpg', alt='Tum jeet gayye!', class='end')
+            else
+              p
+                span.userLevel Level #{currentUser.cryptxLevel}:
+                span.question.serif #{question}
+              form(method='post', action='/').mono
+                input(type='text', placeholder='Press enter to submit', name='answer', maxlength='30', id="answer", required)

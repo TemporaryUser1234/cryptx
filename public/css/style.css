@@ -253,7 +253,7 @@ body {
   margin: 0;
   height: 100%;
   min-height: 100%;
-  background: #FFF;
+  background: #FAFAFA;
   color: #333;
   font-family: 'adobe-garamond-pro', serif; }
 
@@ -320,8 +320,7 @@ a.button {
 
 section {
   padding: 8vh 0;
-  display: block;
-  border-bottom: 1px solid #eee; }
+  display: block; }
   section.grey {
     background: #FAFAFA; }
   section h2.title {
@@ -332,6 +331,9 @@ section {
   section p {
     font-size: 1.3em; }
 
+section:not(#main) {
+  border-bottom: 1px solid #eee; }
+
 header, footer {
   font-family: 'inconsolata' ,'droid-sans-mono', monospace;
   text-transform: uppercase;
@@ -339,7 +341,12 @@ header, footer {
   height: 70px;
   min-width: 100%;
   padding: 3vh 0;
-  box-shadow: none; }
+  box-shadow: none;
+  background: #FFF; }
+  header.plain, footer.plain {
+    height: auto;
+    padding: 1.5vh 0 0.5vh 0;
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.4); }
   header ul#mobile-menu, footer ul#mobile-menu {
     display: none;
     position: absolute;
@@ -424,6 +431,9 @@ footer {
   footer a {
     border: none;
     font-weight: 400; }
+
+#intro {
+  background: #fff; }
 
 #bottom.show-bottom {
   display: none; }
@@ -571,6 +581,111 @@ code {
     margin: 0;
     font-size: 2em;
     font-weight: 100; }
+
+section#main .card {
+  background: #FFF;
+  box-shadow: 1px 2px 1px 0 rgba(0, 0, 0, 0.02);
+  margin: 0 auto;
+  width: 580px;
+  max-width: 100%; }
+  section#main .card p.error {
+    margin-top: 0;
+    text-align: center; }
+  section#main .card h1.form-title {
+    font-size: 2em;
+    margin-top: 0; }
+  section#main .card label {
+    display: block; }
+  section#main .card.form {
+    width: 500px; }
+  section#main .card.question-card {
+    padding: 2.5%;
+    margin-top: 10vh; }
+    section#main .card.question-card p {
+      margin-top: 0;
+      font-size: 1.2em; }
+      section#main .card.question-card p span {
+        display: block; }
+      section#main .card.question-card p span.userLevel {
+        font-weight: bold; }
+      section#main .card.question-card p span.question {
+        white-space: pre-line;
+        max-width: 100%;
+        font-weight: 100; }
+    section#main .card.question-card form input#answer, section#main .card.question-card form textarea {
+      margin-bottom: 0; }
+  section#main .card.leaderboard {
+    width: 100%;
+    max-width: 100%;
+    padding: 3%;
+    text-align: center; }
+    section#main .card.leaderboard.smaller {
+      width: 80%; }
+    section#main .card.leaderboard table {
+      width: 100%;
+      text-align: center;
+      font-size: 1.1em; }
+      section#main .card.leaderboard table th, section#main .card.leaderboard table td {
+        padding: 2%; }
+      section#main .card.leaderboard table tr:nth-child(odd) {
+        background: #F5F5F5; }
+        section#main .card.leaderboard table tr:nth-child(odd).header {
+          background: #6699EE;
+          color: #fff; }
+
+button.cta {
+  width: 100%;
+  padding: 7.5px 0;
+  margin: 5px 0;
+  font-family: 'inconsolata' ,'droid-sans-mono', monospace;
+  color: #FFF;
+  background: #6699EE;
+  text-align: center;
+  border: 1.5px solid #6699EE;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 800;
+  letter-spacing: 0.3px;
+  outline: none; }
+  button.cta:hover {
+    background: #216BE6;
+    border-color: #216BE6; }
+
+/* LOGS RELOAD ANIMATION */
+.animated {
+  -webkit-animation-duration: 15s;
+  animation-duration: 15s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none; }
+
+.yt-loader {
+  -webkit-animation-name: horizontalProgressBar;
+  animation-name: horizontalProgressBar;
+  -webkit-animation-timing-function: ease;
+  animation-timing-function: ease;
+  background: #216be6;
+  height: 3px;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 0%;
+  z-index: 9999;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.3); }
+
+@keyframes horizontalProgressBar {
+  0% {
+    width: 0%; }
+  100% {
+    width: 100%; } }
+
+@-webkit-keyframes horizontalProgressBar /* Safari and Chrome */ {
+  0% {
+    width: 0%; }
+  100% {
+    width: 100%; } }
 
 /***************
  * Responsive Styling *

@@ -1,0 +1,1 @@
+$(function(){$("#check").click(function(c){c.preventDefault(),console.log("check clicked");var e={};e.title="title",e.message="message",$.ajax({type:"POST",data:JSON.stringify(e),contentType:"application/json",url:"http://localhost:7000/",success:function(c){console.log("success"),console.log(JSON.stringify(c))}})})});

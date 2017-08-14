@@ -1,0 +1,24 @@
+extends ../layout
+
+block content
+  section#intro
+    .container
+      .row
+        .seven.columns
+          h2.title CryptX Admin Panel
+          p Here&rsquo;s to the gayzy ones.
+  
+  section#main.grey
+    .container
+      .twelve.columns
+        .card.mono.form
+          if error
+            p.error= error
+          a(href='/admin/add-questions')
+            button.cta#results-button Add questions
+          a(href='/admin/questions')
+            button.cta#results-button Manage questions
+          a(href='/admin/teams')
+            button.cta#manual-button Manage teams
+          a(href='/admin/disqualify')
+            button.cta#dq-button Disqualify team

@@ -1,0 +1,35 @@
+extends ../layout
+
+block content
+  section#intro
+    .container
+      .row
+        .seven.columns
+          h2.title CryptX Admin Panel: Manage
+          p Here&rsquo;s to the gayzy ones.
+          
+  section#main.grey
+    .container
+      .twelve.columns
+        .card.mono.form
+          form(method='post', action='/admin/teams')
+            label Select team:
+            select.select-teams(name='username', id='selectedTeam' onChange='updateValues(this.value)')
+              option Select team
+              each team in teams
+                option= team.username
+            label.single Current level: 
+              span#currentLevel
+            label Set new level:
+            select.select-teams(name='newLevel', id='selectedTeam' onChange='updateValues(this.value)')
+              each question in questions
+                option= question.level
+            input(type='submit', value='Set level')
+  script(type='text/javascript').
+    var teams = !{JSON.stringify(teams)};
+    function updateValues(selectedTeam) {
+      var array = teams.filter(function(team) {
+        return team.username == selectedTeam;
+      });
+      document.getElementById('currentLevel').innerHTML = array[0].cryptxLevel;
+    }

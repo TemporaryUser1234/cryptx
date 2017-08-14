@@ -52,92 +52,11 @@
 		"oAP": "\/Procfile",
 		"oF": 0
 		},
-	"\/public\/css\/style.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/public\/css\/style-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"\/public\/fonts\/minet.eot": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/public\/fonts\/minet.eot",
+	"\/public": {
+		"ft": 65536,
+		"oA": 1,
+		"oAP": "\/build\/public",
 		"oF": 0
-		},
-	"\/public\/fonts\/minet.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "\/public\/fonts\/minet.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"\/public\/fonts\/minet.ttf": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/public\/fonts\/minet.ttf",
-		"oF": 0
-		},
-	"\/public\/fonts\/minet.woff": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/public\/fonts\/minet.woff",
-		"oF": 0
-		},
-	"\/public\/fonts\/minet.woff2": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/public\/fonts\/minet.woff2",
-		"oF": 0
-		},
-	"\/public\/img\/icon.png": {
-		"ft": 32768,
-		"iS": 7125,
-		"oA": 0,
-		"oAP": "\/public\/img\/icon.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
-		"q": 100
-		},
-	"\/public\/img\/make.png": {
-		"ft": 32768,
-		"iS": 26947,
-		"oA": 0,
-		"oAP": "\/public\/img\/make.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
-		"q": 100
-		},
-	"\/public\/img\/messenger.jpg": {
-		"ft": 16384,
-		"iS": 107758,
-		"oA": 0,
-		"oAP": "\/public\/img\/messenger.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"q": 100
-		},
-	"\/public\/img\/x.png": {
-		"ft": 32768,
-		"iS": 15869,
-		"oA": 0,
-		"oAP": "\/public\/img\/x.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
-		"q": 100
 		},
 	"\/README.md": {
 		"cS": 0,
@@ -2194,7 +2113,7 @@
 		],
 	"overrideExternalServerCSS": 0,
 	"previewPathAddition": "",
-	"skippedFoldersString": "log, _logs, logs, _cache, cache, \/storage\/framework\/sessions, node_modules, \/models, \/routes, \/views",
+	"skippedFoldersString": "log, _logs, logs, _cache, cache, \/storage\/framework\/sessions, node_modules, \/models, \/routes, \/views, \/public",
 	"sourceFolderName": "source",
 	"uglifyDefinesString": "",
 	"uglifyFlags2": {

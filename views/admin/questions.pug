@@ -1,0 +1,37 @@
+extends ../layout
+
+block content
+  section#intro
+    .container
+      .row
+        .seven.columns
+          h2.title CryptX Admin Panel
+          p Here&rsquo;s to the gayzy ones.
+  
+  section#main.grey
+    .container
+      .twelve.columns
+        .card.mono.form
+          if error
+            p.error= error
+          form(method='post', action='/admin/questions')
+            label Select level:
+            select.select-teams(name='level', id='selectedQuestion' onChange='updateValues(this.value)')
+              option Select level
+              each question in questions
+                option= question.level
+            label.single Question: 
+            textarea(placeholder='Question' name='question')#currentQuestion
+            label.single Answer: 
+            input(placeholder='Answer' name='answer')#currentAnswer
+            input(type='submit', value='Change question')
+  script(type='text/javascript').
+    var questions = !{JSON.stringify(questions)};
+    function updateValues(selectedQuestion) {
+      var array = questions.filter(function(question) {
+        return question.level == selectedQuestion;
+      });
+      console.log(array[0].answer);
+      document.getElementById('currentQuestion').innerHTML = array[0].question;
+      document.getElementById('currentAnswer').value = array[0].answer;
+    }
